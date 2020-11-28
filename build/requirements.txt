@@ -1,0 +1,5 @@
+gpiozero
+#numpy
+paho-mqtt
+pyyaml
+spidev

@@ -1,0 +1,21 @@
+# Debug logging, optional
+debug: false
+
+# MQTT client settings
+hostname: "mqtt.broker"
+port: 1883 # optional
+qos: 0 # optional
+client_id: "hermes-respeaker-leds_1" # optional
+# Optional
+username: "user"
+password: "password"
+
+site_id: "mysite"
+topics:
+  #- hermes/hotword/+/detected
+  - hermes/dialogueManager/sessionStarted # signals the start of a dialogue session after hotword detected
+  - hermes/nlu/query # thinking
+  - hermes/nlu/intentParsed # successful recognition of intent
+  - hermes/tts/say # speaking
+  - hermes/tts/sayFinished # finished speaking
+  - hermes/dialogueManager/sessionEnded # only check for intentNotRecognized
